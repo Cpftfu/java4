@@ -15,6 +15,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.snackbar.Snackbar;
 
 public class Activity_second_task extends AppCompatActivity {
 
@@ -24,8 +25,8 @@ public class Activity_second_task extends AppCompatActivity {
 
         TextView txt = new TextView(this);
         txt.setText("ГРУППЫ Т50");
-        txt.setTextSize(50); // установка размера текста в 40px
-        txt.setGravity(Gravity.CENTER); // выравнивание текста по центру экрана
+        txt.setTextSize(50);
+        txt.setGravity(Gravity.CENTER);
 
         Button button1 = new MaterialButton(this);
         button1.setText("Группа Т50-11-23");
@@ -73,6 +74,46 @@ public class Activity_second_task extends AppCompatActivity {
                 Intent intent = new Intent(Activity_second_task.this, MainActivity.class);
                 startActivity(intent);
                 finish(); // добавляем сюда finish для закрытия текущего окошка
+            }
+        });
+
+        button1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity_second_task.this, ActivityForGroupData.class);
+                startActivity(intent);
+            }
+        });
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity_second_task.this, ActivityForGroupData1.class);
+                startActivity(intent);
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity_second_task.this, ActivityForGroupData2.class);
+                startActivity(intent);
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity_second_task.this, ActivityForGroupData3.class);
+                startActivity(intent);
+            }
+        });
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity_second_task.this, ActivityForGroupData4.class);
+                startActivity(intent);
             }
         });
     }
